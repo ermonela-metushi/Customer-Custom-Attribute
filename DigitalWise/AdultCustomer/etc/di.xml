@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Customer\Model\ResourceModel\CustomerRepository">
+		<plugin name="DigitalWise_AdultCustomer_Plugin_Magento_Customer_Model_ResourceModel_CustomerRepository" type="DigitalWise\AdultCustomer\Plugin\CustomerRepository" sortOrder="10" disabled="false"/>
+	</type>
+	<type name="Magento\Framework\Console\CommandList">
+		<arguments>
+			<argument name="commands" xsi:type="array">
+				<item name="IsAdult" xsi:type="object">DigitalWise\AdultCustomer\Console\Command\IsAdult</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
